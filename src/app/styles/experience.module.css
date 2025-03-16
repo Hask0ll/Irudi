@@ -1,0 +1,237 @@
+/* src/app/styles/experience.module.css */
+.experience {
+    padding: var(--space-3xl) 0;
+    background-color: var(--background);
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+  }
+  
+  .sectionTitle {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+  
+  .sectionTitle h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: var(--space-sm);
+  }
+  
+  .underline {
+    height: 4px;
+    width: 70px;
+    background-color: var(--secondary-color);
+    margin: 0 auto;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xl);
+    flex-wrap: wrap;
+  }
+  
+  .tabButton {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-lg);
+    background-color: transparent;
+    color: var(--foreground);
+    font-weight: 500;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-normal);
+    cursor: pointer;
+  }
+  
+  .tabButton svg {
+    transition: all var(--transition-normal);
+  }
+  
+  .tabButton:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+  }
+  
+  .tabButton:hover svg {
+    stroke: var(--primary-color);
+  }
+  
+  .tabButton.active {
+    background-color: var(--primary-color);
+    color: var(--background);
+    border-color: var(--primary-color);
+  }
+  
+  .tabButton.active svg {
+    stroke: var(--background);
+  }
+  
+  .content {
+    position: relative;
+    min-height: 300px;
+  }
+  
+  .tabContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-normal);
+    transform: translateY(10px);
+  }
+  
+  .tabContent.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    position: relative;
+  }
+  
+  .timeline {
+    position: relative;
+    padding-left: 30px;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: var(--border-color);
+  }
+  
+  .timelineItem {
+    position: relative;
+    margin-bottom: var(--space-xl);
+  }
+  
+  .timelineItem:last-child {
+    margin-bottom: 0;
+  }
+  
+  .timelinePoint {
+    position: absolute;
+    left: -30px;
+    top: 0;
+    height: 100%;
+  }
+  
+  .timelineDot {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    border: 3px solid var(--background);
+    z-index: 2;
+  }
+  
+  .timelineLine {
+    position: absolute;
+    left: 7px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: transparent;
+  }
+  
+  .timelineContent {
+    background-color: var(--background-alt);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--primary-color);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+  }
+  
+  .timelineContent:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .timelineHeader {
+    margin-bottom: var(--space-md);
+  }
+  
+  .timelineTitle {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: var(--space-xs);
+  }
+  
+  .timelineCompany {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--foreground-light);
+    margin-bottom: var(--space-xs);
+  }
+  
+  .timelineLocation,
+  .timelinePeriod {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: 0.9rem;
+    color: var(--foreground-light);
+    margin-bottom: var(--space-xs);
+  }
+  
+  .timelineDescription ul {
+    padding-left: var(--space-md);
+  }
+  
+  .timelineDescription li {
+    margin-bottom: var(--space-xs);
+    position: relative;
+  }
+  
+  .timelineDescription li::before {
+    content: "•";
+    color: var(--secondary-color);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+  
+  @media (max-width: 768px) {
+    .experience {
+      padding: var(--space-2xl) 0;
+    }
+    
+    .sectionTitle h2 {
+      font-size: 2rem;
+    }
+    
+    .tabButton {
+      padding: var(--space-xs) var(--space-md);
+      font-size: 0.9rem;
+    }
+    
+    .tabs {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .timelineTitle {
+      font-size: 1.3rem;
+    }
+    
+    .timelineContent {
+      padding: var(--space-md);
+    }
+  }
