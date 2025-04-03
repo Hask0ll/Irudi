@@ -24,24 +24,7 @@
     box-shadow: var(--glow-teal);
     z-index: 0;
   }
-  
-  /* Lignes géométriques dans la sphère */
-  .hero::after {
-    content: '';
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    background-image: 
-      linear-gradient(to right, transparent 49.5%, rgba(217, 176, 140, 0.5) 49.5%, rgba(217, 176, 140, 0.5) 50.5%, transparent 50.5%),
-      linear-gradient(to bottom, transparent 49.5%, rgba(17, 100, 102, 0.5) 49.5%, rgba(17, 100, 102, 0.5) 50.5%, transparent 50.5%),
-      linear-gradient(45deg, transparent 49.5%, rgba(217, 176, 140, 0.3) 49.5%, rgba(217, 176, 140, 0.3) 50.5%, transparent 50.5%),
-      linear-gradient(-45deg, transparent 49.5%, rgba(17, 100, 102, 0.3) 49.5%, rgba(17, 100, 102, 0.3) 50.5%, transparent 50.5%);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    z-index: 0;
-  }
+
   
   .container {
     width: 100%;
@@ -50,12 +33,15 @@
     padding: 0 var(--space-md);
     z-index: 2;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .content {
     max-width: 700px;
     margin: 0 auto;
-    text-align: left;
+    text-align: center;
     color: var(--foreground);
     z-index: 2;
   }
@@ -124,6 +110,7 @@
     display: flex;
     gap: var(--space-md);
     margin-bottom: var(--space-xl);
+    justify-content: center;
   }
   
   .primaryButton {
@@ -170,6 +157,8 @@
   .socialLinks {
     display: flex;
     gap: var(--space-md);
+    justify-content: center;
+    margin-top: var(--space-md);
   }
   
   .socialLink {
@@ -284,6 +273,36 @@
     top: 30%;
     left: 50%;
     animation-delay: 1.2s;
+  }
+  
+  .particle:nth-child(6) {
+    top: 25%;
+    left: 35%;
+    animation-delay: 1.5s;
+  }
+  
+  .particle:nth-child(7) {
+    top: 65%;
+    left: 65%;
+    animation-delay: 1.8s;
+  }
+  
+  .particle:nth-child(8) {
+    top: 45%;
+    left: 25%;
+    animation-delay: 2.1s;
+  }
+  
+  .particle:nth-child(9) {
+    top: 15%;
+    left: 75%;
+    animation-delay: 2.4s;
+  }
+  
+  .particle:nth-child(10) {
+    top: 75%;
+    left: 45%;
+    animation-delay: 2.7s;
   }
   
   /* Media Queries */

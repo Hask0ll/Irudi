@@ -29,11 +29,11 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'Accueil', href: '#hero' },
-    { name: 'À propos', href: '#about' },
-    { name: 'Compétences', href: '#skills' },
-    { name: 'Expérience', href: '#experience' },
-    { name: 'Projets', href: '#projects' },
+    { name: 'Home', href: '#hero' },
+    { name: 'About', href: '#about' },
+    { name: 'Skills', href: '#skills' },
+    { name: 'Experiences', href: '#experience' },
+    { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -41,8 +41,8 @@ export default function Navbar() {
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          <span className={styles.name}>Votre Nom</span>
-          <span className={styles.title}>Développeur Web</span>
+          <span className={styles.name}>BARAT Dorian</span>
+          <span className={styles.title}>PROGRAMMER</span>
         </Link>
 
         {/* Desktop menu */}

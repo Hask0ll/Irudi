@@ -5,35 +5,41 @@ import { useState } from 'react';
 import styles from '../styles/skills.module.css';
 
 export default function Skills() {
-  const [activeTab, setActiveTab] = useState('frontend');
+  const [activeTab, setActiveTab] = useState('LowLevel');
   
   const skills = {
+    Software: [
+        { name: 'Unreal engine', level: 85 },
+        { name: 'Unity', level: 30 },
+    ],
+    LowLevel: [
+        { name: 'C++', level: 85 },
+        { name: 'C#', level: 70 },
+    ],
     frontend: [
-      { name: 'HTML5', level: 90 },
-      { name: 'CSS3/SASS', level: 85 },
-      { name: 'JavaScript (ES6+)', level: 90 },
-      { name: 'React.js', level: 85 },
-      { name: 'Next.js', level: 80 },
-      { name: 'Tailwind CSS', level: 85 },
-      { name: 'TypeScript', level: 75 },
+      { name: 'HTML5', level: 50 },
+      { name: 'CSS3/SASS', level: 50 },
+      { name: 'JavaScript (ES6+)', level: 60 },
+      { name: 'React.js', level: 70 },
+      { name: 'Next.js', level: 70 },
+      { name: 'Tailwind CSS', level: 50 },
+      { name: 'TypeScript', level: 60 },
     ],
     backend: [
-      { name: 'Node.js', level: 80 },
-      { name: 'Express.js', level: 80 },
-      { name: 'Nest.js', level: 75 },
-      { name: 'RESTful APIs', level: 85 },
-      { name: 'GraphQL', level: 70 },
-      { name: 'MongoDB', level: 75 },
-      { name: 'PostgreSQL', level: 70 },
+      { name: 'Node.js', level: 30 },
+      { name: 'Nest.js', level: 70 },
+      { name: 'MongoDB', level: 90 },
+      { name: 'PostgreSQL', level: 20 },
     ],
     tools: [
-      { name: 'Git/GitHub', level: 90 },
-      { name: 'Docker', level: 70 },
-      { name: 'CI/CD', level: 75 },
-      { name: 'Jest', level: 80 },
-      { name: 'Webpack', level: 75 },
+      { name: 'Git/GitHub', level: 95 },
+      { name: 'Docker', level: 40 },
+      { name: 'CI/CD', level: 30 },
       { name: 'VS Code', level: 95 },
-      { name: 'Figma', level: 65 },
+      { name: 'Visual studio', level: 95 },
+      { name: 'JetBrains', level: 95 },
+      { name: 'Azure Devops', level: 90 },
+      { name: 'Figma', level: 20 },
     ]
   };
 
@@ -63,6 +69,12 @@ export default function Skills() {
             onClick={() => setActiveTab('tools')}
           >
             Outils & Autres
+          </button>
+          <button 
+            className={`${styles.tabButton} ${activeTab === 'LowLevel' ? styles.active : ''}`}
+            onClick={() => setActiveTab('LowLevel')}
+          >
+            Low-Level
           </button>
         </div>
         
@@ -108,6 +120,25 @@ export default function Skills() {
           <div className={`${styles.skillsTab} ${activeTab === 'tools' ? styles.active : ''}`}>
             <div className={styles.skillsGrid}>
               {skills.tools.map((skill, index) => (
+                <div key={index} className={styles.skillItem}>
+                  <div className={styles.skillInfo}>
+                    <span className={styles.skillName}>{skill.name}</span>
+                    <span className={styles.skillPercentage}>{skill.level}%</span>
+                  </div>
+                  <div className={styles.progressBar}>
+                    <div 
+                      className={styles.progress} 
+                      style={{ width: `${skill.level}%` }}
+                    ></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className={`${styles.skillsTab} ${activeTab === 'LowLevel' ? styles.active : ''}`}>
+            <div className={styles.skillsGrid}>
+              {skills.backend.map((skill, index) => (
                 <div key={index} className={styles.skillItem}>
                   <div className={styles.skillInfo}>
                     <span className={styles.skillName}>{skill.name}</span>
