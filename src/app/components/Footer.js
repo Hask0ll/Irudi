@@ -25,7 +25,6 @@ export default function Footer() {
                 <li><Link href="#skills">Compétences</Link></li>
                 <li><Link href="#experience">Expérience</Link></li>
                 <li><Link href="#projects">Projets</Link></li>
-                <li><Link href="#contact">Contact</Link></li>
               </ul>
             </div>
             

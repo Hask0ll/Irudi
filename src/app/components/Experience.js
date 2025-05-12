@@ -11,90 +11,55 @@ export default function Experience() {
     work: [
       {
         title: "Développeur Full Stack",
-        company: "Nom de l'entreprise",
-        location: "Ville, Pays",
-        period: "Janvier 2023 - Présent",
+        company: "Peaksys",
+        location: "Bordeaux, France",
+        period: "Mars 2023 - Septembre 2025",
         description: [
-          "Développement et maintenance d'applications web modernes avec React, Next.js et Node.js",
-          "Collaboration avec l'équipe de design pour transformer des maquettes en interfaces réactives",
+          "Développement d'API .NET et maintenance et conception d'un logiciel avec interface client.",
           "Optimisation des performances et de l'accessibilité des applications",
           "Participation à la définition d'architectures techniques évolutives"
         ]
       },
-      {
-        title: "Développeur Frontend",
-        company: "Nom de l'entreprise précédente",
-        location: "Ville, Pays",
-        period: "Juin 2021 - Décembre 2022",
-        description: [
-          "Création d'interfaces utilisateur réactives et accessibles avec React",
-          "Intégration avec des APIs RESTful",
-          "Tests unitaires et d'intégration avec Jest et React Testing Library",
-          "Revue de code et mentorat des développeurs juniors"
-        ]
-      },
-      {
-        title: "Développeur Web Junior",
-        company: "Nom de l'entreprise de début",
-        location: "Ville, Pays",
-        period: "Janvier 2020 - Mai 2021",
-        description: [
-          "Développement de fonctionnalités frontend et backend pour des applications web",
-          "Maintenance et amélioration de sites existants",
-          "Correction de bugs et optimisation des performances",
-          "Participation aux réunions client et aux sessions de planification"
-        ]
-      }
     ],
     education: [
       {
         title: "Master en Informatique",
-        institution: "Université / École",
-        location: "Ville, Pays",
-        period: "2018 - 2020",
+        institution: "Ynov",
+        location: "Bordeaux, France",
+        period: "2023 - 2025",
         description: [
-          "Spécialisation en développement web et applications mobiles",
-          "Projet de fin d'études: application web de gestion de projets",
-          "Mention Bien"
+          "Spécialisation en développement jeu vidéo et moteur",
+          "Projet de fin d'études: conception d'un jeu complet avec le management de toutes les parties prenantes pour la réalisation.",
         ]
       },
       {
         title: "Licence en Informatique",
-        institution: "Université / École",
-        location: "Ville, Pays",
-        period: "2015 - 2018",
+        institution: "Epitech",
+        location: "Bordeaux, France",
+        period: "2019 - 2023",
         description: [
-          "Fondamentaux de la programmation, structures de données et algorithmes",
-          "Introduction aux bases de données et au développement web",
-          "Mention Très Bien"
+          "Fondamentaux de la programmation, languages de bas niveaux et algorithmes",
+          "Introduction aux CI/CD, cybersécurité, IA et au développement web",
         ]
       }
     ],
     certifications: [
-      {
-        title: "AWS Certified Developer - Associate",
-        institution: "Amazon Web Services",
-        period: "Octobre 2023",
-        description: [
-          "Compétences validées en développement et maintenance d'applications sur AWS"
-        ]
-      },
-      {
-        title: "Professional Scrum Master I (PSM I)",
-        institution: "Scrum.org",
-        period: "Mai 2022",
-        description: [
-          "Compréhension approfondie de la méthodologie Scrum et du rôle de Scrum Master"
-        ]
-      },
-      {
-        title: "MongoDB Certified Developer",
-        institution: "MongoDB University",
-        period: "Janvier 2021",
-        description: [
-          "Expertise dans la conception et l'optimisation de bases de données MongoDB"
-        ]
-      }
+        {
+            title: "RNCP 7",
+            institution: "Ynov",
+            period: "2023 - 2025",
+            description: [
+                "Compétence validées pour le titre rncp 7 informatique."
+            ]
+        },
+        {
+            title: "MongoDB certifications",
+            institution: "MongoDB",
+            period: "Octobre 2023",
+            description: [
+            "Compétences validées en gestion de base de données MongoDB"
+            ]
+        }
     ]
   };
 

@@ -4,16 +4,16 @@
     background-color: var(--background-alt);
     position: relative;
     overflow: hidden;
-  }
+}
   
-  /* Élément décoratif géométrique */
-  .about::before {
+/* Un effet subtil pour la section About */
+.about::before {
     content: '';
     position: absolute;
     width: 400px;
     height: 400px;
-    background: linear-gradient(45deg, rgba(17, 100, 102, 0.05) 25%, transparent 25%, transparent 75%, rgba(17, 100, 102, 0.05) 75%),
-                linear-gradient(45deg, rgba(17, 100, 102, 0.05) 25%, transparent 25%, transparent 75%, rgba(17, 100, 102, 0.05) 75%);
+    background: linear-gradient(45deg, rgba(96, 108, 56, 0.03) 25%, transparent 25%, transparent 75%, rgba(96, 108, 56, 0.03) 75%),
+                linear-gradient(45deg, rgba(96, 108, 56, 0.03) 25%, transparent 25%, transparent 75%, rgba(96, 108, 56, 0.03) 75%);
     background-size: 40px 40px;
     background-position: 0 0, 20px 20px;
     top: -200px;
@@ -21,7 +21,7 @@
     border-radius: 50%;
     opacity: 0.4;
     z-index: 0;
-  }
+}
   
   .about::after {
     content: '';
@@ -56,7 +56,7 @@
   
   .sectionTitle h2 {
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--foreground);
     margin-bottom: var(--space-sm);
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -136,7 +136,6 @@
     letter-spacing: 0.1em;
   }
   
-  /* Effet de bordure futuriste */
   .decoration {
     position: absolute;
     width: 100%;
@@ -148,29 +147,6 @@
     z-index: 1;
   }
   
-  /* Effet de coin technologique */
-  .decoration::before,
-  .decoration::after {
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    border-color: var(--secondary-color);
-    border-style: solid;
-  }
-  
-  .decoration::before {
-    top: -10px;
-    left: -10px;
-    border-width: 2px 0 0 2px;
-  }
-  
-  .decoration::after {
-    bottom: -10px;
-    right: -10px;
-    border-width: 0 2px 2px 0;
-  }
-  
   .bio {
     color: var(--foreground);
     position: relative;
@@ -178,7 +154,7 @@
   
   .bio h3 {
     font-size: 2rem;
-    color: var(--primary-color);
+    color: var(--foreground);
     margin-bottom: var(--space-md);
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -194,6 +170,7 @@
     bottom: -5px;
     left: 0;
     background: linear-gradient(90deg, var(--secondary-color) 0%, transparent 100%);
+    border-color: --;
   }
   
   .bio p {
@@ -206,7 +183,7 @@
     grid-template-columns: 1fr;
     gap: var(--space-md);
     margin: var(--space-xl) 0;
-    background-color: rgba(17, 100, 102, 0.05);
+    background-color: var(--background);
     padding: var(--space-lg);
     border-radius: 10px;
     border-left: 3px solid var(--primary-color);
@@ -255,19 +232,19 @@
     justify-content: center;
     gap: var(--space-sm);
     padding: var(--space-sm) var(--space-lg);
-    background-color: var(--primary-color);
-    color: var(--background);
+    background-color: var(--secondary-color);
+    color: var(--foreground);
     font-weight: 500;
     border-radius: var(--radius-md);
     transition: all var(--transition-normal);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--foreground);
   }
   
   .downloadButton:hover {
     background-color: transparent;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     box-shadow: var(--glow-teal);
     transform: translateY(-2px);
   }
@@ -326,3 +303,27 @@
       padding: var(--space-md);
     }
   }
+
+.imgPlaceholder {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+  border: 3px solid var(--background);
+  box-shadow: var(--shadow-md);
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  object-position: center 0%; /* La valeur 30% déplace la photo vers le haut */
+}
+
+.imgPlaceholder:hover .profileImage {
+  transform: scale(1.03);
+}

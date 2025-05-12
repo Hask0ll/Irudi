@@ -1,4 +1,5 @@
 // src/app/components/About.js
+import Image from 'next/image'; // Next.js inclut le composant Image
 import styles from '../styles/about.module.css';
 
 export default function About() {
@@ -13,10 +14,15 @@ export default function About() {
         <div className={styles.content}>
           <div className={styles.imgContainer}>
             <div className={styles.imgPlaceholder}>
-              {/* Remplacez ceci par votre image avec la balise Image de Next.js */}
-              <div className={styles.avatar}>
-                <span>Votre Photo</span>
-              </div>
+              {/* Image optimisée avec le composant Image de Next.js */}
+              <Image 
+                src="/images/profile.jpg" 
+                alt="Dorian Barat" 
+                width={350} 
+                height={350} 
+                className={styles.profileImage}
+                priority
+              />
             </div>
             <div className={styles.decoration}></div>
           </div>
@@ -24,18 +30,7 @@ export default function About() {
           <div className={styles.bio}>
             <h3>Qui suis-je?</h3>
             <p>
-              Bonjour ! Je suis [Votre Nom], développeur web passionné par la création d'expériences numériques
-              intuitives et élégantes. Avec [X années] d'expérience dans le développement web, je me spécialise
-              dans la création d'applications web modernes utilisant les dernières technologies.
-            </p>
-            <p>
-              Mon parcours m'a permis de développer une solide expertise en [Votre spécialisation]
-              et j'ai eu l'opportunité de travailler sur divers projets allant des sites vitrines aux
-              applications complexes à forte charge.
-            </p>
-            <p>
-              En dehors du code, je m'intéresse à [Vos centres d'intérêt] et je suis toujours en quête
-              d'apprentissage de nouvelles technologies et méthodologies.
+              J'ai découvert la programmation par curiosité, je suis resté par passion.
             </p>
             
             <div className={styles.personalInfo}>
@@ -61,9 +56,9 @@ export default function About() {
               </div>
             </div>
             
-            <a href="public/CV.pdf" target="_blank" rel="noopener noreferrer" className={styles.downloadButton}>
+            <a href="/CV.pdf" target="_blank" rel="noopener noreferrer" className={styles.downloadButton}>
               Télécharger mon CV
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg xmlns="file:///C:/Users/dobar/Downloads/CV.pdf" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
               </svg>
             </a>

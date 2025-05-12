@@ -66,7 +66,7 @@ export default function Hero() {
             <Link href="#projects" className={styles.primaryButton}>
               My Projects
             </Link>
-            <Link href="#contact" className={styles.secondaryButton}>
+            <Link href="#about" className={styles.secondaryButton}>
               Contact Me
             </Link>
           </div>

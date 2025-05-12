@@ -1,154 +1,93 @@
 /* src/app/styles/skills.module.css */
 .skills {
-    padding: var(--space-3xl) 0;
-    background-color: var(--background-alt);
-  }
-  
-  .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--space-md);
-  }
-  
-  .sectionTitle {
-    text-align: center;
-    margin-bottom: var(--space-2xl);
+  padding: var(--space-3xl) 0;
+  background-color: var(--background);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.sectionTitle h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: var(--space-sm);
+}
+
+.underline {
+  height: 4px;
+  width: 70px;
+  background-color: var(--secondary-color);
+  margin: 0 auto;
+}
+
+.skillsTable {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.categorySection {
+  margin-bottom: var(--space-lg);
+}
+
+.categoryTitle {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-xs);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-md);
+}
+
+.skillItem {
+  background-color: #e7e6e6;
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  display: flex;
+  align-items: center;
+  border-left: 4px solid var(--primary-color);
+}
+
+.skillItem:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.skillName {
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+@media (max-width: 768px) {
+  .skills {
+    padding: var(--space-2xl) 0;
   }
   
   .sectionTitle h2 {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: var(--space-sm);
+    font-size: 2rem;
   }
   
-  .underline {
-    height: 4px;
-    width: 70px;
-    background-color: var(--secondary-color);
-    margin: 0 auto;
-  }
-  
-  .skillsTabs {
-    display: flex;
-    justify-content: center;
-    gap: var(--space-sm);
-    margin-bottom: var(--space-xl);
-    flex-wrap: wrap;
-  }
-  
-  .tabButton {
-    padding: var(--space-sm) var(--space-lg);
-    background-color: transparent;
-    color: var(--foreground);
-    font-weight: 500;
-    border: 2px solid var(--border-color);
-    border-radius: var(--radius-md);
-    transition: all var(--transition-normal);
-    cursor: pointer;
-  }
-  
-  .tabButton:hover {
-    border-color: var(--primary-color);
-    color: var(--primary-color);
-  }
-  
-  .tabButton.active {
-    background-color: var(--primary-color);
-    color: var(--background);
-    border-color: var(--primary-color);
-  }
-  
-  .skillsContent {
-    position: relative;
-    min-height: 300px;
-  }
-  
-  .skillsTab {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    opacity: 0;
-    visibility: hidden;
-    transition: all var(--transition-normal);
-    transform: translateY(10px);
-  }
-  
-  .skillsTab.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+  .categoryTitle {
+    font-size: 1.3rem;
   }
   
   .skillsGrid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-lg);
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   }
-  
-  @media (min-width: 768px) {
-    .skillsGrid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  .skillItem {
-    margin-bottom: var(--space-md);
-  }
-  
-  .skillInfo {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: var(--space-xs);
-  }
-  
-  .skillName {
-    font-weight: 500;
-    color: var(--foreground);
-  }
-  
-  .skillPercentage {
-    color: var(--primary-color);
-    font-weight: 700;
-  }
-  
-  .progressBar {
-    height: 8px;
-    background-color: var(--border-color);
-    border-radius: var(--radius-sm);
-    overflow: hidden;
-  }
-  
-  .progress {
-    height: 100%;
-    background-color: var(--primary-color);
-    border-radius: var(--radius-sm);
-    width: 0;
-    transition: width 1s ease-in-out;
-    animation: progressAnimation 1s ease-in-out forwards;
-  }
-  
-  @keyframes progressAnimation {
-    from {
-      width: 0;
-    }
-    to {
-      width: var(--width, 0%);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .skills {
-      padding: var(--space-2xl) 0;
-    }
-    
-    .sectionTitle h2 {
-      font-size: 2rem;
-    }
-    
-    .tabButton {
-      padding: var(--space-xs) var(--space-md);
-      font-size: 0.9rem;
-    }
-  }
+}

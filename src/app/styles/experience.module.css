@@ -1,7 +1,7 @@
 /* src/app/styles/experience.module.css */
 .experience {
     padding: var(--space-3xl) 0;
-    background-color: var(--background);
+    background-color: var(--background-alt);
   }
   
   .container {
@@ -18,7 +18,7 @@
   
   .sectionTitle h2 {
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--background);
     margin-bottom: var(--space-sm);
   }
   
@@ -43,7 +43,7 @@
     gap: var(--space-xs);
     padding: var(--space-sm) var(--space-lg);
     background-color: transparent;
-    color: var(--foreground);
+    color: var(--background);
     font-weight: 500;
     border: 2px solid var(--border-color);
     border-radius: var(--radius-md);
@@ -56,16 +56,16 @@
   }
   
   .tabButton:hover {
-    border-color: var(--primary-color);
-    color: var(--primary-color);
+    border-color: var(--secondary-color);
+    color: var(--background);
   }
   
   .tabButton:hover svg {
-    stroke: var(--primary-color);
+    stroke: var(--background);
   }
   
   .tabButton.active {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: var(--background);
     border-color: var(--primary-color);
   }
@@ -150,7 +150,7 @@
   }
   
   .timelineContent {
-    background-color: var(--background-alt);
+    background-color: var(--background);
     padding: var(--space-lg);
     border-radius: var(--radius-md);
     border-left: 4px solid var(--primary-color);
@@ -169,7 +169,7 @@
   
   .timelineTitle {
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: var(--space-xs);
   }
   

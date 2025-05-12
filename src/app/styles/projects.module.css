@@ -1,7 +1,7 @@
 /* src/app/styles/projects.module.css */
 .projects {
     padding: var(--space-3xl) 0;
-    background-color: var(--background-alt);
+    background-color: var(--background);
   }
   
   .container {
